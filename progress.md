@@ -3,7 +3,7 @@
 Task-uri asignate:
 
 Catalin : 
-[-] EmailSender
+[+] EmailSender
 
 
 Emil :
