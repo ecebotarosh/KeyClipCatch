@@ -2,7 +2,7 @@
 
 namespace Modules
 {
-    public abstract class GetterModule : IModule
+    public abstract class GetterModule
     {
         protected DataCapsule.DataCapsule.DataCapsule _data;
 
