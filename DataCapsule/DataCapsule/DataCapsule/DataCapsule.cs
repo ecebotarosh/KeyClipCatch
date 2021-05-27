@@ -20,7 +20,6 @@
             var imageBytes = imageStream.ToArray();
             var ImageBase64 = System.Convert.ToBase64String(imageBytes);
             _date = ImageBase64;
-            System.Console.WriteLine(_date);
             imageStream.Dispose();
         }
         
