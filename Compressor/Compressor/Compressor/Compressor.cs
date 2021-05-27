@@ -2,7 +2,7 @@
 {
     public class Compressor
     {
-        public byte[] Compress(byte []data)
+        public static byte[] Compress(byte []data)
         {
             using (var compressedStream = new System.IO.MemoryStream())
             using (System.IO.Compression.GZipStream zipStream = new System.IO.Compression.GZipStream(compressedStream, System.IO.Compression.CompressionMode.Compress))
