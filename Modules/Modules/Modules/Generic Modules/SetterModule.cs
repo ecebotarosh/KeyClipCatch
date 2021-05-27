@@ -1,9 +1,8 @@
-﻿namespace Modules.Generic_Modules
+﻿namespace Modules
 {
-    abstract class SetterModule : IModule
+    abstract class SetterModule
     {
         protected object _content;
-        public abstract void Execute();
 
         public abstract void Execute(object content);
 
