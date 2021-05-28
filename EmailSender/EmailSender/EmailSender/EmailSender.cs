@@ -38,6 +38,7 @@ namespace IP_Proiect
         private SmtpClient _smtp;
         private MailMessage _mailMessage;
         private List<string> _fileNames;
+        public string MessageBody { get; set; }
 
         private EmailSender()
         {
@@ -54,7 +55,10 @@ namespace IP_Proiect
             _smtp.Credentials = new NetworkCredential(_address, _password);
             _smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
         }
-
+        public List<string> EmailList
+        {
+            get { return _emails; }
+        }
         public static EmailSender Instance
         { get { if (_instance == null)
                 {
@@ -177,6 +181,7 @@ namespace IP_Proiect
                 Console.Out.WriteLine("Nu gasesc fisierul cu emailuri\n"+fileNotFound.Message);
             }
         }
+        
     }
     
 }
