@@ -20,7 +20,7 @@ namespace Modules
     /// <summary>
     /// 
     /// </summary>
-    abstract class SetterModule
+    public abstract class SetterModule
     {
         protected object _content;
 
