@@ -47,10 +47,9 @@
             // 
             // buttonAddEmail
             // 
-            this.buttonAddEmail.Location = new System.Drawing.Point(7, 25);
-            this.buttonAddEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAddEmail.Location = new System.Drawing.Point(6, 20);
             this.buttonAddEmail.Name = "buttonAddEmail";
-            this.buttonAddEmail.Size = new System.Drawing.Size(84, 44);
+            this.buttonAddEmail.Size = new System.Drawing.Size(67, 35);
             this.buttonAddEmail.TabIndex = 1;
             this.buttonAddEmail.Text = "+";
             this.buttonAddEmail.UseVisualStyleBackColor = true;
@@ -58,19 +57,17 @@
             // 
             // textBoxInputEmail
             // 
-            this.textBoxInputEmail.Location = new System.Drawing.Point(99, 31);
-            this.textBoxInputEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxInputEmail.Location = new System.Drawing.Point(79, 25);
             this.textBoxInputEmail.Multiline = true;
             this.textBoxInputEmail.Name = "textBoxInputEmail";
-            this.textBoxInputEmail.Size = new System.Drawing.Size(1149, 37);
+            this.textBoxInputEmail.Size = new System.Drawing.Size(920, 30);
             this.textBoxInputEmail.TabIndex = 2;
             // 
             // buttonToggleKeylogging
             // 
-            this.buttonToggleKeylogging.Location = new System.Drawing.Point(1172, 144);
-            this.buttonToggleKeylogging.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonToggleKeylogging.Location = new System.Drawing.Point(938, 115);
             this.buttonToggleKeylogging.Name = "buttonToggleKeylogging";
-            this.buttonToggleKeylogging.Size = new System.Drawing.Size(218, 65);
+            this.buttonToggleKeylogging.Size = new System.Drawing.Size(174, 52);
             this.buttonToggleKeylogging.TabIndex = 4;
             this.buttonToggleKeylogging.Text = "Start";
             this.buttonToggleKeylogging.UseVisualStyleBackColor = true;
@@ -78,10 +75,9 @@
             // 
             // buttonSendToMailingList
             // 
-            this.buttonSendToMailingList.Location = new System.Drawing.Point(1171, 661);
-            this.buttonSendToMailingList.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSendToMailingList.Location = new System.Drawing.Point(937, 529);
             this.buttonSendToMailingList.Name = "buttonSendToMailingList";
-            this.buttonSendToMailingList.Size = new System.Drawing.Size(218, 62);
+            this.buttonSendToMailingList.Size = new System.Drawing.Size(174, 50);
             this.buttonSendToMailingList.TabIndex = 5;
             this.buttonSendToMailingList.Text = "Send to C2";
             this.buttonSendToMailingList.UseVisualStyleBackColor = true;
@@ -89,10 +85,9 @@
             // 
             // buttonSetClipboardText
             // 
-            this.buttonSetClipboardText.Location = new System.Drawing.Point(1172, 380);
-            this.buttonSetClipboardText.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSetClipboardText.Location = new System.Drawing.Point(938, 304);
             this.buttonSetClipboardText.Name = "buttonSetClipboardText";
-            this.buttonSetClipboardText.Size = new System.Drawing.Size(218, 72);
+            this.buttonSetClipboardText.Size = new System.Drawing.Size(174, 58);
             this.buttonSetClipboardText.TabIndex = 6;
             this.buttonSetClipboardText.Text = "Set Clipboard Text";
             this.buttonSetClipboardText.UseVisualStyleBackColor = true;
@@ -100,10 +95,9 @@
             // 
             // buttonGetClipboardImage
             // 
-            this.buttonGetClipboardImage.Location = new System.Drawing.Point(1171, 505);
-            this.buttonGetClipboardImage.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonGetClipboardImage.Location = new System.Drawing.Point(937, 404);
             this.buttonGetClipboardImage.Name = "buttonGetClipboardImage";
-            this.buttonGetClipboardImage.Size = new System.Drawing.Size(218, 72);
+            this.buttonGetClipboardImage.Size = new System.Drawing.Size(174, 58);
             this.buttonGetClipboardImage.TabIndex = 7;
             this.buttonGetClipboardImage.Text = "Get Clipboard Image";
             this.buttonGetClipboardImage.UseVisualStyleBackColor = true;
@@ -111,19 +105,17 @@
             // 
             // textBoxKeylogging
             // 
-            this.textBoxKeylogging.Location = new System.Drawing.Point(418, 144);
-            this.textBoxKeylogging.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxKeylogging.Location = new System.Drawing.Point(334, 115);
             this.textBoxKeylogging.Multiline = true;
             this.textBoxKeylogging.Name = "textBoxKeylogging";
-            this.textBoxKeylogging.Size = new System.Drawing.Size(687, 579);
+            this.textBoxKeylogging.Size = new System.Drawing.Size(550, 464);
             this.textBoxKeylogging.TabIndex = 9;
             // 
             // buttonGetClipboardText
             // 
-            this.buttonGetClipboardText.Location = new System.Drawing.Point(1172, 300);
-            this.buttonGetClipboardText.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonGetClipboardText.Location = new System.Drawing.Point(938, 240);
             this.buttonGetClipboardText.Name = "buttonGetClipboardText";
-            this.buttonGetClipboardText.Size = new System.Drawing.Size(218, 72);
+            this.buttonGetClipboardText.Size = new System.Drawing.Size(174, 58);
             this.buttonGetClipboardText.TabIndex = 10;
             this.buttonGetClipboardText.Text = "Get Clipboard Text";
             this.buttonGetClipboardText.UseVisualStyleBackColor = true;
@@ -131,21 +123,20 @@
             // 
             // buttonHelp
             // 
-            this.buttonHelp.Location = new System.Drawing.Point(24, 38);
-            this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonHelp.Location = new System.Drawing.Point(19, 30);
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(156, 65);
+            this.buttonHelp.Size = new System.Drawing.Size(125, 52);
             this.buttonHelp.TabIndex = 12;
             this.buttonHelp.Text = "Help";
             this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // buttonDeleteEmail
             // 
             this.buttonDeleteEmail.Enabled = false;
-            this.buttonDeleteEmail.Location = new System.Drawing.Point(24, 774);
-            this.buttonDeleteEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDeleteEmail.Location = new System.Drawing.Point(19, 619);
             this.buttonDeleteEmail.Name = "buttonDeleteEmail";
-            this.buttonDeleteEmail.Size = new System.Drawing.Size(84, 44);
+            this.buttonDeleteEmail.Size = new System.Drawing.Size(67, 35);
             this.buttonDeleteEmail.TabIndex = 1;
             this.buttonDeleteEmail.Text = "-";
             this.buttonDeleteEmail.UseVisualStyleBackColor = true;
@@ -154,10 +145,11 @@
             // listBoxEmails
             // 
             this.listBoxEmails.FormattingEnabled = true;
-            this.listBoxEmails.ItemHeight = 25;
-            this.listBoxEmails.Location = new System.Drawing.Point(37, 144);
+            this.listBoxEmails.ItemHeight = 20;
+            this.listBoxEmails.Location = new System.Drawing.Point(30, 115);
+            this.listBoxEmails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxEmails.Name = "listBoxEmails";
-            this.listBoxEmails.Size = new System.Drawing.Size(341, 279);
+            this.listBoxEmails.Size = new System.Drawing.Size(274, 224);
             this.listBoxEmails.TabIndex = 14;
             this.listBoxEmails.SelectedIndexChanged += new System.EventHandler(this.listBoxEmails_SelectedIndexChanged);
             // 
@@ -165,18 +157,21 @@
             // 
             this.groupBoxEmail.Controls.Add(this.buttonAddEmail);
             this.groupBoxEmail.Controls.Add(this.textBoxInputEmail);
-            this.groupBoxEmail.Location = new System.Drawing.Point(128, 750);
+            this.groupBoxEmail.Location = new System.Drawing.Point(102, 600);
+            this.groupBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxEmail.Name = "groupBoxEmail";
-            this.groupBoxEmail.Size = new System.Drawing.Size(1274, 76);
+            this.groupBoxEmail.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxEmail.Size = new System.Drawing.Size(1019, 61);
             this.groupBoxEmail.TabIndex = 15;
             this.groupBoxEmail.TabStop = false;
             this.groupBoxEmail.Text = "Add Email";
             // 
             // buttonLoadEmails
             // 
-            this.buttonLoadEmails.Location = new System.Drawing.Point(37, 487);
+            this.buttonLoadEmails.Location = new System.Drawing.Point(30, 390);
+            this.buttonLoadEmails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonLoadEmails.Name = "buttonLoadEmails";
-            this.buttonLoadEmails.Size = new System.Drawing.Size(341, 34);
+            this.buttonLoadEmails.Size = new System.Drawing.Size(273, 27);
             this.buttonLoadEmails.TabIndex = 17;
             this.buttonLoadEmails.Text = "Load Emails from File";
             this.buttonLoadEmails.UseVisualStyleBackColor = true;
@@ -185,9 +180,10 @@
             // buttonSaveEmails
             // 
             this.buttonSaveEmails.Enabled = false;
-            this.buttonSaveEmails.Location = new System.Drawing.Point(37, 596);
+            this.buttonSaveEmails.Location = new System.Drawing.Point(30, 477);
+            this.buttonSaveEmails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSaveEmails.Name = "buttonSaveEmails";
-            this.buttonSaveEmails.Size = new System.Drawing.Size(341, 34);
+            this.buttonSaveEmails.Size = new System.Drawing.Size(273, 27);
             this.buttonSaveEmails.TabIndex = 17;
             this.buttonSaveEmails.Text = "Save Emails to File";
             this.buttonSaveEmails.UseVisualStyleBackColor = true;
@@ -195,9 +191,9 @@
             // 
             // KeyClipCatch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1738, 1050);
+            this.ClientSize = new System.Drawing.Size(1390, 840);
             this.Controls.Add(this.buttonSaveEmails);
             this.Controls.Add(this.buttonLoadEmails);
             this.Controls.Add(this.listBoxEmails);
@@ -210,7 +206,6 @@
             this.Controls.Add(this.buttonSendToMailingList);
             this.Controls.Add(this.buttonToggleKeylogging);
             this.Controls.Add(this.groupBoxEmail);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KeyClipCatch";
             this.Text = "KeyClipCatch";
             this.groupBoxEmail.ResumeLayout(false);

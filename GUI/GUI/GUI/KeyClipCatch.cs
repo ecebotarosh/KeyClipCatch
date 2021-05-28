@@ -186,5 +186,17 @@ namespace ProiectIP
         {
             _emailSender.SaveEmails();
         }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Help.ShowHelp(this, "KeyLoggerHelp.chm");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("KeyLoggerHelp not found");
+            }
+        }
     }
 }
