@@ -16,7 +16,7 @@
 
 namespace Modules
 {
-    class GetClipboardTextModule : GetterModule
+    public class GetClipboardTextModule : GetterModule
     {
         public override void Execute()
         {

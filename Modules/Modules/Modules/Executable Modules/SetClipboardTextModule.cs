@@ -15,7 +15,7 @@
  **************************************************************************/
 namespace Modules
 {
-    class SetClipboardTextModule : SetterModule
+    public class SetClipboardTextModule : SetterModule
     {
         public override void Execute(object content)
         {

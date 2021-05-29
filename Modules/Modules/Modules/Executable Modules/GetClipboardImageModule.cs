@@ -15,7 +15,7 @@
  **************************************************************************/
 namespace Modules
 {
-    class GetClipboardImageModule : GetterModule
+    public class GetClipboardImageModule : GetterModule
     {
         public override void Execute()
         {

