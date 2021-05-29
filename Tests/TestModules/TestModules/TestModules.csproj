@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+    <PackageReference Include="System.Security.Permissions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DataCapsule">
+      <HintPath>..\..\..\Modules\Modules\Modules\bin\Debug\netcoreapp3.1\DataCapsule.dll</HintPath>
+    </Reference>
+    <Reference Include="Keylogger">
+      <HintPath>..\..\..\Keylogger\Keylogger\Keylogger\bin\Debug\Keylogger.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules">
+      <HintPath>..\..\..\Modules\Modules\Modules\bin\Debug\netcoreapp3.1\Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\Modules\Modules\Modules\bin\Debug\netcoreapp3.1\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
