@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.Properties;
+using System;
 using System.Windows.Forms;
 
 namespace ProiectIP
@@ -191,11 +192,11 @@ namespace ProiectIP
         {
             try
             {
-                Help.ShowHelp(this, "KeyLoggerHelp.chm");
+                Help.ShowHelp(this, "..\\..\\..\\..\\..\\..\\KeyLoggerHelp.chm");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("KeyLoggerHelp not found");
+                MessageBox.Show("KeyLoggerHelp not found" + ex.Message);
             }
         }
     }

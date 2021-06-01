@@ -158,7 +158,7 @@ namespace Keylogger
                 case 18:
                     return "<Alt>";
                 case 40:
-                    return "<ArrowUp>";
+                    return "<ArrowDown>";
                 case 37:
                     return "<ArrowLeft>";
                 case 39:
